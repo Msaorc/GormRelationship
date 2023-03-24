@@ -2,6 +2,7 @@ package entity
 
 import (
 	"github.com/Msaorc/GoRelationship/pkg/entity"
+	"gorm.io/gorm"
 )
 
 type Expense struct {
@@ -9,8 +10,9 @@ type Expense struct {
 	Description    string
 	Value          float64
 	Note           string
-	ExpenseLevelID entity.ID
+	ExpenseLevelID entity.ID `gorm:"size:36"`
 	ExpenseLevel
-	ExpenseOriginID entity.ID
+	ExpenseOriginID entity.ID `gorm:"size:36"`
 	ExpenseOrigin
+	gorm.Model
 }

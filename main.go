@@ -25,6 +25,6 @@ func main() {
 	var expenses []entity.Expense
 	db.Preload("ExpenseLevel").Preload("ExpenseOrigin").Find(&expenses)
 	for _, expense := range expenses {
-		fmt.Println(expense.ID, expense.Description, expense.Value, expense.ExpenseLevel.Description, expense.ExpenseOrigin.Description)
+		fmt.Println(expense.ID, expense.Description, expense.Value, expense.Note, expense.ExpenseLevel.Description, expense.ExpenseOrigin.Description)
 	}
 }
