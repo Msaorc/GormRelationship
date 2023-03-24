@@ -18,7 +18,7 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	err = database.CreateExpense(db, "Copo", 120.00, "Pocoto de Asa", expenseLevel.ID, expenseOrigin.ID)
+	err = database.CreateExpense(db, "Copo", 120.00, "Stanley", expenseLevel.ID, expenseOrigin.ID)
 	if err != nil {
 		panic(err)
 	}
