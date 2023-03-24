@@ -1,9 +1,11 @@
 package entity
 
-import "github.com/Msaorc/GoRelationship/pkg/entity"
+import (
+	"github.com/Msaorc/GoRelationship/pkg/entity"
+)
 
 type Expense struct {
-	ID             entity.ID
+	ID             entity.ID `gorm:"primaryKey"`
 	Description    string
 	Value          float64
 	Note           string
